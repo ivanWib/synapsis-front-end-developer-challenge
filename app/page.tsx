@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Navbar from "@/component/Navbar";
-import Footer from "@/component/Footer";
+// import Footer from "@/component/Footer";
 
 type Post = {
   id?: string;
@@ -55,7 +55,7 @@ export default function Home() {
   };
 
   return (
-    <main className="bg-[#0F0F0F] text-white">
+    <main className="bg-[#0F0F0F] h-full p-5 text-white">
       <div className="bg-[rgba(228,228,228,0.5)] shadow-lg backdrop-blur-md border-opacity-18 border border-solid border-white rounded-2xl p-3">
         <Navbar />
       </div>
@@ -81,9 +81,9 @@ export default function Home() {
             );
           })}
       </div>
-      <div className="bg-[rgba(228,228,228,0.5)] shadow-lg backdrop-blur-md border-opacity-18 border border-solid border-white rounded-2xl p-3 md:p-6 mt-5">
+      {/* <div className="bg-[rgba(228,228,228,0.5)] shadow-lg backdrop-blur-md border-opacity-18 border border-solid border-white rounded-2xl p-3 md:p-6 mt-5">
         <Footer />
-      </div>
+      </div> */}
     </main>
   );
 }

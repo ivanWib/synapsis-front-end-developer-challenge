@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Navbar from "@/component/Navbar";
-import Footer from "@/component/Footer";
+// import Footer from "@/component/Footer";
 
 // Define types
 type Post = {
@@ -64,7 +64,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="bg-[#232D3F] text-white">
+    <main className="bg-[#232D3F] h-screen p-5 text-white">
       <div className="bg-[rgba(228,228,228,0.5)] shadow-lg backdrop-blur-md border-opacity-18 border border-solid border-white rounded-2xl p-3">
         <Navbar />
       </div>
@@ -81,11 +81,11 @@ export default function Home() {
         </div>
       )}
 
-      <hr className="m-5" />
+      {/* <hr className="m-5" /> */}
 
       {comments.length > 0 && (
-        <div className="mx-5">
-          <h3 className="mb-3">Comments:</h3>
+        <div className="mx-5 mt-5">
+          <h3 className="mb-3 font-bold">Comments:</h3>
           {comments.map((comment) => (
             <div key={comment.id}>
               <p>Name: {comment.name}</p>
@@ -96,9 +96,9 @@ export default function Home() {
           ))}
         </div>
       )}
-      <div className="bg-[rgba(228,228,228,0.5)] shadow-lg backdrop-blur-md border-opacity-18 border border-solid border-white rounded-2xl p-3 md:p-6 mt-5">
+      {/* <div className="bg-[rgba(228,228,228,0.5)] shadow-lg backdrop-blur-md border-opacity-18 border border-solid border-white rounded-2xl p-3 md:p-6 mt-5">
         <Footer />
-      </div>
+      </div> */}
     </main>
   );
 }
